@@ -31,7 +31,7 @@ Para uma fila, podemos fornecer os seguintes parâmetros:
 
 `capacity`: capacidade máxima da fila
 
-`exit`: tempo mínimo e máximo de saída
+`exit`: tempo mínimo e máximo de saída da fila (tempo em serviço).
 
 `first_entry`: tempo da primeira chegada
 
