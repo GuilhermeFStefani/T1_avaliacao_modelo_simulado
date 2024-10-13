@@ -1,0 +1,76 @@
+{
+    "simulations": [
+        {
+            "simulationCount": 1,
+            "executionCount": 100000,
+            "queues": [
+                {
+                    "id": "FILA1",
+                    "servers": 1,
+                    "entry": {
+                        "min": 2.0,
+                        "max": 4.0
+                    },
+                    "exit": {
+                        "min": 1.0,
+                        "max": 2.0
+                    },
+                    "first_entry": 2.0,
+                    "networks": [
+                        {
+                            "probability": 0.8,
+                            "destiny": "FILA2"
+                        },
+                        {
+                            "probability": 0.2,
+                            "destiny": "FILA3"
+
+                        }
+                    ]
+                },
+                {
+                    "id": "FILA2",
+                    "servers": 2,
+                    "capacity": 5,
+                    "exit": {
+                        "min": 4.0,
+                        "max": 8.0
+                    },
+                    "networks": [
+                        {
+                            "probability": 0.3,
+                            "destiny": "FILA1"
+                        },
+                        {
+                            "probability": 0.5,
+                            "destiny": "FILA2"
+                        },
+                        {
+                            "probability": 0.2,
+                            "destiny": "EXIT"
+                        }
+                    ]
+                },
+                {
+                    "id": "FILA3",
+                    "servers": 2,
+                    "capacity": 10,
+                    "exit": {
+                        "min": 5.0,
+                        "max": 15.0
+                    },
+                    "networks": [
+                        {
+                            "probability": 0.7,
+                            "destiny": "FILA3"
+                        },
+                        {
+                            "probability": 0.3,
+                            "destiny": "EXIT"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
